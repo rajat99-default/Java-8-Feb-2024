@@ -3,16 +3,16 @@ import java.util.Scanner;
 public class Special_number {
     
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner o = new Scanner(System.in);
         System.out.print("Enter the number of digits you will enter = ");
 
-        int a = scanner.nextInt();
+        int a = o.nextInt();
         int arr[] = new int[a];
         int b = 0;
 
         for(int i = 0; i < arr.length; ++i) {
             System.out.print("Enter number = " + i + " = ");
-            arr[i] = scanner.nextInt();
+            arr[i] = o.nextInt();
         }
 
         for(int i = 0; i < arr.length; ++i) {
@@ -25,7 +25,7 @@ public class Special_number {
             for(int j = 1; j <= arr[i]; ++j) {
                 factorial = factorial* j;
             }
-            sum += factorial;
+            sum = sum + factorial;
         }
         
         if(b == sum) {
@@ -34,6 +34,6 @@ public class Special_number {
             System.out.print("NO");
         }
 
-        scanner.close();
+        o.close();
     }
 }
